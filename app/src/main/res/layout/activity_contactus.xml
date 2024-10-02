@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/contactbg2"
+    android:orientation="vertical"
+    tools:context=".contactus">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="CONTACT US"
+        android:textColor="@color/coloryellow"
+        android:fontFamily="@font/lemon"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="25dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="30dp"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/facebook"
+        android:id="@+id/facebook"
+        />
+
+    <ImageView
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/instagram"
+        android:id="@+id/insta"/>
+
+    <ImageView
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/whatsapp"
+        android:id="@+id/whatsapp" />
+
+    <ImageView
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/twitter"
+        android:id="@+id/twitter" />
+</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="OFFICE ADDRESS"
+        android:textColor="@color/coloryellow"
+        android:layout_marginTop="35dp"
+        android:padding="10dp"
+        android:fontFamily="@font/coco"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:text="No.15 Thirumalai Achari Street     Arakkonam, TamilNadu 631001"
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/lemon"
+        android:textSize="11dp"/>
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout"
+    tools:context=".homepage"
+    >
+<com.google.android.material.navigation.NavigationView
+    android:id="@+id/nav_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:theme="@style/navtheme"
+    android:padding="20dp"
+    app:itemTextColor="@color/coloryellow"
+    app:itemIconTint="@color/coloryellow"
+    android:layout_gravity="end"
+    app:headerLayout="@layout/header"
+    app:menu="@menu/main_menu"
+    />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refresh">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <ImageView
+            android:id="@+id/navi"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/navi" />
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:src="@drawable/movie_paradise_namsss"
+            android:layout_centerHorizontal="true"/>
+        <ImageView
+        android:id="@+id/logout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/log_out"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        >
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="Search Movies"
+            android:textColorHint="#333333"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:textSize="10dp"
+            android:inputType="text"
+            android:textColor="@android:color/primary_text_dark"
+            android:fontFamily="@font/lemon"
+            android:background="@drawable/edit"
+            android:autofillHints=""
+            android:id="@+id/Search_bar"
+            />
+        <ImageView
+            android:id="@+id/Search_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_search"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/Search_bar"/>
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:gravity="center"
+    >
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slide_page"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="15dp"
+        />
+<com.google.android.material.tabs.TabLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/indicator"
+    android:layout_below="@id/slide_page"
+    app:tabGravity="center"
+    app:tabIndicatorHeight="0dp"
+    app:tabBackground="@drawable/indicator_selector"/>
+
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Popular Movies"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/coloryellow"
+            android:id="@+id/best"
+            android:fontFamily="@font/lemon"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/best_recycle"
+            android:layout_width="400dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/best"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latest Movies THIS WEEK"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/coloryellow"
+            android:id="@+id/latest"
+            android:fontFamily="@font/lemon"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/latest_recycle"
+            android:layout_width="400dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/latest"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable"
+        android:background="@color/bg"
+        app:tabTextColor="@color/coloryellow"
+        app:tabRippleColor="@android:color/darker_gray"
+        app:tabIndicatorColor="@android:color/darker_gray"
+        android:id="@+id/tab_action"
+        >
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tab_movies_recycle"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_below="@+id/tab_action"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
+
+</LinearLayout>
+
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".aboutus">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="ABOUT US"
+        android:textColor="@color/coloryellow"
+        android:fontFamily="@font/lemon"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="who we are ?"
+        android:textColor="@color/coloryellow"
+        android:fontFamily="@font/lemon"
+        android:padding="10dp"
+        android:textSize="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="ONLINE Streaming platform - We love to provide Movies for free in our platform. Developing our platform to next level. Work is on Progress"
+        android:fontFamily="@font/coco"
+        android:lineSpacingExtra="10dp"
+        android:textSize="10dp"
+        android:textColor="#fff"/>
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Achievements"
+    android:textColor="@color/coloryellow"
+    android:fontFamily="@font/lemon"
+        android:layout_marginTop="20dp"
+    android:padding="10dp"
+    android:textSize="12dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="There is no achievements except finishing this project. We will be achieving with updating this project to upper level and more. Definetly you will be completely satisfy with our platform"
+        android:fontFamily="@font/coco"
+        android:lineSpacingExtra="10dp"
+        android:textSize="10dp"
+        android:textColor="#fff"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inspiration"
+        android:textColor="@color/coloryellow"
+        android:fontFamily="@font/lemon"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textSize="12dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Inspired from Movie and Tv shows Online Streaming platforms like AMAZON Prime, Netflix, YouTuble Etc,. We are working towards the greatest things that are greater than the other streaming platforms with the support of you"
+        android:fontFamily="@font/coco"
+        android:lineSpacingExtra="10dp"
+        android:textSize="10dp"
+        android:textColor="#fff"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Goals"
+        android:textColor="@color/coloryellow"
+        android:fontFamily="@font/lemon"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textSize="12dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Whatever the situation is we have to do our best to achieve something. By these words we are working towards the success"
+        android:fontFamily="@font/coco"
+        android:lineSpacingExtra="10dp"
+        android:textSize="10dp"
+        android:textColor="#fff"/>
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/goldmedal"
+        android:layout_gravity="center"/>
+</LinearLayout>
+</ScrollView>

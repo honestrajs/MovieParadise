@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<group>
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        android:iconTint="@color/coloryellow"
+        />
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_person"
+        android:iconTint="@color/coloryellow"
+        />
+    <item
+        android:id="@+id/nav_about"
+        android:title="About Us"
+        android:icon="@drawable/about_us"
+        android:iconTint="@color/coloryellow"/>
+    <item
+        android:id="@+id/nav_contact"
+        android:title="Contact Us"
+        android:icon="@drawable/contact_us"
+        android:iconTint="@color/coloryellow"/>
+    <item
+        android:id="@+id/nav_faq"
+        android:title="Faq"
+        android:icon="@drawable/faq_icon"
+        android:iconTint="@color/coloryellow"/>
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout"
+            android:icon="@drawable/logout_icon"
+            android:iconTint="@color/coloryellow"/>
+            <item
+                android:id="@+id/nav_share"
+                android:title="Share"
+                android:icon="@drawable/share_icon"
+                android:iconTint="@color/coloryellow"/>
+            <item
+                android:id="@+id/nav_rateus"
+                android:title="Rate Us"
+                android:icon="@drawable/rateus_icon"
+                android:iconTint="@color/coloryellow"/>
+        </group>
+</menu>
+

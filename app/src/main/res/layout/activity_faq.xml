@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    tools:context=".faq">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/coloryellow"
+        android:text="HOW TO USE OUR PLATFORM"
+        android:fontFamily="@font/coco"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/faq_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="80dp"
+        android:paddingEnd="80dp"
+        android:layout_marginTop="30dp" />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="LogIn Credentials ?"
+    android:textColor="@color/coloryellow"
+    android:fontFamily="@font/coco"
+    android:layout_marginTop="30dp"
+    android:padding="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#fff"
+        android:text="Use Mobile Number for both Login and Signing Up."/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forget Password ? ?"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/coloryellow"
+        android:fontFamily="@font/coco"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#fff"
+        android:text="Mobile Number Verification is mandatory for Changing the password."/>
+</LinearLayout>
+</ScrollView>

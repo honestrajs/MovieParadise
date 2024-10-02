@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".MovieDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/detail_movie_cover"
+            tools:srcCompat="@tools:sample/backgrounds/scenic"></ImageView>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/gradient_bg"
+            app:layout_constraintEnd_toEndOf="@id/detail_movie_cover"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/detail_movie_cover"
+            android:id="@+id/imageview"
+            app:layout_constraintBottom_toBottomOf="@id/detail_movie_cover"></ImageView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="@id/imageview"
+            app:layout_constraintStart_toStartOf="@id/imageview"
+            app:layout_constraintTop_toTopOf="@id/imageview"
+            app:layout_constraintBottom_toBottomOf="@id/imageview"
+            android:src="@drawable/ic_play_btn"
+            android:id="@+id/play_fab"
+            ></com.google.android.material.floatingactionbutton.FloatingActionButton>
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="175dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/detail_movie_cover"
+            app:layout_constraintTop_toBottomOf="@id/detail_movie_cover"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/details_movie_image"
+            android:transitionName="sharedName"></ImageView>
+        
+        <TextView
+            android:id="@+id/detail_movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="textview"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/details_movie_image"
+            app:layout_constraintTop_toBottomOf="@id/detail_movie_cover"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/lemon"
+            ></TextView>
+        <TextView
+            android:id="@+id/detail_movie_desc"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Description textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_image"
+            android:textColor="#67747E"
+            android:textSize="10dp"
+            android:fontFamily="@font/lemon"
+            ></TextView>
+
+
+        <TextView
+            android:id="@+id/detail_movie_cast"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Cast and Crew"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_movie_desc"
+            android:textColor="#CEDBE4"
+            android:fontFamily="@font/coco" />
+
+
+        <TextView
+            android:id="@+id/year"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Year"
+            app:layout_constraintEnd_toStartOf="@id/year_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_movie_cast"
+            android:textColor="@color/coloryellow"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/year_type"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:text="2020"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/year"
+            app:layout_constraintTop_toBottomOf="@id/detail_movie_cast"
+            android:textColor="#F1E8D6"
+            android:fontFamily="@font/lemon" />
+
+
+        <TextView
+            android:id="@+id/hero"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Hero"
+            app:layout_constraintEnd_toStartOf="@id/hero_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/year"
+            android:textColor="@color/coloryellow"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/hero_type"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:text="TypeHero"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/hero"
+            app:layout_constraintTop_toBottomOf="@id/year_type"
+            android:textColor="#F1E8D6"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/heroine"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Heroine"
+            app:layout_constraintEnd_toStartOf="@+id/heroine_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hero"
+            android:textColor="@color/coloryellow"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/heroine_type"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:text="TypeHeroine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/heroine"
+            app:layout_constraintTop_toBottomOf="@id/hero_type"
+            android:textColor="#F1E8D6"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/comedian"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Comedian"
+            app:layout_constraintEnd_toStartOf="@id/comedian_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heroine"
+            android:textColor="@color/coloryellow"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/comedian_type"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:text="TypeComedian"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/comedian"
+            app:layout_constraintTop_toBottomOf="@id/heroine_type"
+            android:textColor="#F1E8D6"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/director"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Director"
+            app:layout_constraintEnd_toStartOf="@id/director_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/comedian"
+            android:textColor="@color/coloryellow"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/director_type"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:text="TypeDirector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/director"
+            app:layout_constraintTop_toBottomOf="@id/comedian_type"
+            android:textColor="#F1E8D6"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/music"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Music"
+            app:layout_constraintEnd_toStartOf="@id/music_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/director"
+            android:textColor="@color/coloryellow"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/music_type"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:text="TypeMusic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/music"
+            app:layout_constraintTop_toBottomOf="@id/director_type"
+            android:textColor="#F1E8D6"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/production"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Production House"
+            app:layout_constraintEnd_toStartOf="@id/production_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/music"
+            android:textColor="@color/coloryellow"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:id="@+id/production_type"
+            android:lineSpacingExtra="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="16dp"
+            android:text="TypeProduction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/production"
+            app:layout_constraintTop_toBottomOf="@id/music_type"
+            android:textColor="#F1E8D6"
+            android:fontFamily="@font/coco" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:padding="16dp"
+            android:text="Similar Movies"
+            android:textColor="@color/coloryellow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/production_type"
+            app:layout_constraintVertical_bias="0.0"
+            android:id="@+id/text_similar_movies"
+            android:fontFamily="@font/lemon" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_similar_movies"
+            android:id="@+id/recycle_similar_movies"></androidx.recyclerview.widget.RecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
