@@ -1,2 +1,2 @@
 # MovieParadise
-Online movie stream android app
+Online movie streaming android app
